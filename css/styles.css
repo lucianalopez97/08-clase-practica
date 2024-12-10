@@ -57,8 +57,15 @@ a {
     color: var(--text-white);
     border: none;
     padding: 10px 25px;
-    border-radius: var(--rounded-sm)
+    border-radius: var(--rounded-sm);
+    cursor: pointer;
 }
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--electric);
+}
+
 
 /* Esta es una manera para evitar escribir tanto flex y utilizar clases al estilo de tailwind */
 
@@ -338,3 +345,107 @@ main {
     /* Es a cada imagen destro del discover-cards le damos un tamaño del 30% de los 1200px que tiene el padre (#DISCOVER) */
     width: 30%;
 }
+
+
+/* ===================== */
+/* ===== PRODUCTS ====== */
+/* ===================== */
+
+#products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem 0;
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+#products h2 {
+    font-size: var(--subtitle);
+}
+
+.categories {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.category {
+    background-color: var(--btn-bg);
+    border: none;
+    color: var(--text-white);
+    padding: 10px 15px;
+    border-radius: var(--rounded-sm);
+    cursor: pointer;
+}
+
+/* Para cuando un boton esté activo */
+.category-active {
+    background-color: var(--primary);
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.product {
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 36px 26px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    width: 100%;
+}
+
+.product-top, 
+.product-mid, 
+.product-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-top h3 {
+    font-size: 1rem;
+    font-weight: var(--medium);
+}
+
+.product-top p,
+.product-user p {
+    color: var(--text-gray);
+}
+
+.product-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-price {
+    font-weight: var(--bold);
+    font-size: 1.1rem;
+}
+
+.offer-time {
+    display: flez;
+    gap: 10px;
+    align-items: center;
+    font-weight: var(--medium);
+}
+
+.offer-time img {
+    width: 16px;
+}
+
