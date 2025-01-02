@@ -98,10 +98,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
     padding: 15px 30px;
     color: var(--text-gray);
     /* height: 65px; */
+    background: linear-gradient(#121e3c, var(--background));
+    position: fixed;
+    width: 100%;
 }
 
 .navbar,
@@ -132,6 +135,24 @@ header {
 body{
     background-color: var(--background);
     color: var(--text-white);
+}
+
+/* Carrito */
+.cart {
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: 6opx;
+    height: calc(100vh - 60px);
+    color: white;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cart-items-container {
+    background-color: blue;
 }
 
 /* ==================== */
