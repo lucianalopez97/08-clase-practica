@@ -62,19 +62,28 @@ a {
     cursor: pointer;
 }
 
+.btn:hover {
+    background-color: var(--fire);
+}
+
 .btn-secondary {
     background-color: transparent;
     border: 1px solid var(--electric);
 }
 
+.btn-secondary:hover {
+    background-color: var(--electric);
+    color: #000;
+}
+
 
 /* Esta es una manera para evitar escribir tanto flex y utilizar clases al estilo de tailwind */
 
-/* .flex {
+.flex {
     display: flex;
 }
 
-.justify-center {
+/* .justify-center {
     justify-content: center;
 }
 
@@ -89,7 +98,7 @@ a {
 
 .flex-col {
     flex-direction: column;
-} */
+} */ */
 
 /* ==================== */
 /* ====== HEADER ====== */
@@ -148,6 +157,7 @@ body{
 
 .cart-icon {
     cursor: pointer;
+    color: var(--text-white);
 }
 
 /* Carrito */
@@ -165,7 +175,10 @@ body{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    display: none;
+    /* display: none; */
+    transform: translateX(150%);
+    transition: all .5s;
+    z-index: 2;
 }
 
 .cart-items-container {
@@ -248,7 +261,8 @@ body{
 /* selector ~ para hermanos del mismo padre */
 
 #cart-toggle:checked ~ .cart {
-    display: flex;
+    /* display: flex; */
+    transform: translateX(0);
 }
 
 /* ==================== */

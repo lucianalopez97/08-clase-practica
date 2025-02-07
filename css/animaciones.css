@@ -1,0 +1,126 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    display: none;
+}
+
+#cart-toggle:checked ~ .overlay {
+    display: block;
+}
+
+#menu-toggle:checked ~ .overlay {
+    display: block;
+}
+
+.menu-label {
+    width: 30px;
+    /* height: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-line {
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    transition: all .2s;
+} 
+
+
+#menu-toggle:checked ~ label .menu-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ label .menu-line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ label .menu-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/*  Hover vamos a mostrar un subrayado que pasa de principio a fin */
+
+.navbar-list li {
+    position: relative;
+}
+
+.navbar-list li a::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform all .15s ease;
+}
+
+.navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+/* hovers */
+
+.cart-icon {
+    transition: all .2s;
+}
+
+.cart-icon:hover {
+    color: var(--electric);
+}
+
+.cart-icon:active {
+    scale: 0.9;
+}
+
+/* animaciones */
+
+@keyframes fade{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up{
+    from {
+        translate: 0 100px;
+    }
+
+    to {
+        translate: 0;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        translate: 100px 0;
+    }
+    to {
+        translate: 0;
+    }
+}
+
+.hero-info h1{
+    opacity: 0;
+    animation: face 0.8s forwards, slid-up 0.9s;
+}
+
+
+
