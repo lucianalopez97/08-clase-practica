@@ -93,6 +93,7 @@
     from {
         opacity: 0;
     }
+    
     to {
         opacity: 1;
     }
@@ -112,6 +113,7 @@
     from {
         translate: 100px 0;
     }
+
     to {
         translate: 0;
     }
@@ -119,8 +121,51 @@
 
 .hero-info h1{
     opacity: 0;
-    animation: face 0.8s forwards, slid-up 0.9s;
+    animation: fade 0.8s forwards, slide-up 0.9s;
 }
+
+.hero-info p {
+    opacity: 0;
+    animation: fade 1s forwards, slide-up 0.9s;
+    animation-delay: 0.5s;
+}
+
+.hero-info btn {
+    opacity: 0;
+    animation: fade 0.8s forwards, slide-up 0.9s;
+    animation-delay: 0.5s;
+}
+
+.hero-card {
+    opacity: 0;
+    animation: fade 1s forwards, slide-right 1.2s;
+}
+
+#info h2 {
+    opacity: 0;
+    animation: fade 0.8s forwards, slide-up 0.9s;
+    animation-delay: 0.8s;
+}
+
+.info-card {
+    opacity: 0;
+    animation: fade 0.8s forwards, slide-up 0.9s;
+}
+
+.info-card:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.info-card:nth-child(2) {
+    animation-delay: 0.9s;
+}
+
+.info-card:nth-child(3) {
+    animation-delay: 1.1s;
+}
+
+
+
 
 
 

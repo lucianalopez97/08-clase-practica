@@ -83,7 +83,7 @@ a {
     display: flex;
 }
 
-/* .justify-center {
+.justify-center {
     justify-content: center;
 }
 
@@ -98,7 +98,7 @@ a {
 
 .flex-col {
     flex-direction: column;
-} */ */
+} 
 
 /* ==================== */
 /* ====== HEADER ====== */
@@ -115,6 +115,7 @@ header {
     background: linear-gradient(#121e3c, var(--background));
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 
 .navbar,
