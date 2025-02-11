@@ -297,6 +297,9 @@ main {
 .hero-info h1 {
     font-size: var(--tittle);
     font-weight: var(--bold);
+    background: linear-gradient(to top, #30cfd0, #c43ad6);
+    color: transparent; 
+    background-clip: text;
 }
 
 .hero-info p {

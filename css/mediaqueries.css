@@ -36,6 +36,36 @@
         cursor: pointer;
     }
 
+    .menu-label {
+        width: 30px;
+        /* height: 20px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .menu-line {
+        height: 2px;
+        background-color: white;
+        width: 100%;
+        transition: all .2s;
+    } 
+    
+    
+    #menu-toggle:checked ~ label .menu-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    #menu-toggle:checked ~ label .menu-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked ~ label .menu-line:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
     .cart-icon {
         height: 20px;
     }
@@ -47,10 +77,15 @@
 
     /* HERO */
 
+    #hero {
+        flex-direction: column;
+    }
+
     .hero-info {
         text-align: center;
         width: 100%;
         align-items: center;
+        order: 2;
     }
 
     .hero-info h1 {
@@ -62,7 +97,8 @@
     }
 
     .hero-card {
-        display: none;
+        /* display: none; */
+        z-index: -2;
     }
 
     /* INFO */

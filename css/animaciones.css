@@ -19,35 +19,7 @@
     display: block;
 }
 
-.menu-label {
-    width: 30px;
-    /* height: 20px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
 
-.menu-line {
-    height: 2px;
-    background-color: white;
-    width: 100%;
-    transition: all .2s;
-} 
-
-
-#menu-toggle:checked ~ label .menu-line:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-}
-
-#menu-toggle:checked ~ label .menu-line:nth-child(2) {
-    opacity: 0;
-}
-
-#menu-toggle:checked ~ label .menu-line:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-}
 
 /*  Hover vamos a mostrar un subrayado que pasa de principio a fin */
 
@@ -164,8 +136,48 @@
     animation-delay: 1.1s;
 }
 
+/* animaciones typewriter */
 
+@keyframes blink {
+    to {
+        background-color: transparent;
+        opacity: 0;
+    }
+}
 
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
 
+.hero-info h1 span {
+    position: relative;
+    background: linear-gradient(to top, #30cfd0, #c43ad6);
+    color: transparent; 
+    background-clip: text;
+}
 
+.hero-info h1 span::before,
+.hero-info h1 span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
+.hero-info h1 span::before {
+    /* background-color: red; */
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+    animation: typewriter 1.2s 1.4s steps(6) forwards;
+}
+
+.hero-info h1 span::after {
+    width: 5px;
+    background: linear-gradient(to top, #30cfd0, #c43ad6);
+    animation: typewriter 1.2s 1.4s steps(6) forwards, blink 0.8s steps(6) infinite;
+}
