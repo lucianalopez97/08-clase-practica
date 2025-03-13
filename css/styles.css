@@ -104,6 +104,11 @@ a {
 /* ====== HEADER ====== */
 /* ==================== */
 
+html {
+    scroll-padding-top: 90px;
+    scroll-behavior: smooth;
+}
+
 header {
     display: flex;
     justify-content: space-between;
